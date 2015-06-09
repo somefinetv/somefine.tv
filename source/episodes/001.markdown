@@ -1,5 +1,4 @@
 ---
-public: true
 title: Shows We're Watching
 shows:
   - Breaking Bad
