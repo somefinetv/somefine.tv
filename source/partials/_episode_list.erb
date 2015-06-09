@@ -1,0 +1,11 @@
+<% if episodes.any? %>
+  <ol class="episodes">
+    <% episodes.each do |episode| %>
+      <li>
+        <%= link_to "#{episode_number(episode)}: #{episode.data.title}", episode.url %>
+      </li>
+    <% end %>
+  </ol>
+<% else %>
+  <h3>Sorry, no episodes (yet)</h3>
+<% end %>

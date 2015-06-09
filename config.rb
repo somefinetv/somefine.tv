@@ -24,6 +24,8 @@
 #   page "/admin/*"
 # end
 
+page "/episodes/*", layout: :episode
+
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
 #  :which_fake_page => "Rendering a fake page with a local variable" }
@@ -34,6 +36,9 @@
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
+
+# /foo instead of /foo.html
+activate :directory_indexes
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -47,7 +52,19 @@ helpers do
   end
 
   def episodes
-    []
+    @episodes ||= sitemap.resources.find_all do |resource|
+      resource.path.start_with? "episodes"
+    end.sort_by do |resource|
+      episode_number(resource)
+    end.reverse
+  end
+
+  def episode_number(episode)
+    File.basename(episode.source_file).sub(".markdown", "")
+  end
+
+  def path_to_audio(page)
+    "/files/#{episode_number(page)}.m4a"
   end
 end
 
