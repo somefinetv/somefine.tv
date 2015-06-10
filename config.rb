@@ -25,6 +25,7 @@
 # end
 
 page "/episodes/*", layout: :episode
+page "/episodes.rss", layout: false
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
@@ -48,12 +49,12 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
   def page_title
-    [current_page.data.title, "Some Fine Television"].compact.join(" | ")
+    [current_page.data.title, site_name].compact.join(" | ")
   end
 
   def episodes
     @episodes ||= sitemap.resources.find_all do |resource|
-      resource.path.start_with? "episodes"
+      resource.path =~ %r{episodes/.*\.html}
     end.sort_by do |resource|
       episode_number(resource)
     end.reverse
@@ -65,6 +66,22 @@ helpers do
 
   def path_to_audio(page)
     "/files/#{episode_number(page)}.m4a"
+  end
+
+  def site_url
+    "http://somefine.tv"
+  end
+
+  def site_name
+    "Some Fine Television"
+  end
+
+  def full_url(path)
+    "#{site_url}#{path}"
+  end
+
+  def rfc822_timestamp(timeish)
+    timeish.to_time.rfc822
   end
 end
 
