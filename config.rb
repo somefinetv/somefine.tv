@@ -85,6 +85,16 @@ helpers do
   def rfc822_timestamp(timeish)
     timeish.to_time.rfc822
   end
+
+  def copyright_date
+    starting = 2015
+
+    if (current = Date.today.year) > starting
+      "#{starting}–#{current}"
+    else
+      starting
+    end
+  end
 end
 
 set :css_dir, 'stylesheets'
