@@ -44,6 +44,8 @@ activate :directory_indexes
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
+
+  set :http_prefix, "http://localhost:4567"
 end
 
 # Methods defined in the helpers block are available in templates
@@ -69,7 +71,7 @@ helpers do
   end
 
   def site_url
-    "http://somefine.tv"
+    config[:http_prefix]
   end
 
   def site_name
@@ -77,7 +79,7 @@ helpers do
   end
 
   def full_url(path)
-    "#{site_url}#{path}"
+    "#{config[:http_prefix]}#{path}"
   end
 
   def rfc822_timestamp(timeish)
@@ -108,5 +110,5 @@ configure :build do
   activate :relative_assets
 
   # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  set :http_prefix, "http://somefine.tv"
 end
