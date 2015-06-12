@@ -7,11 +7,13 @@
     <title><%= page_title %></title>
 
     <%= stylesheet_link_tag "all" %>
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="<%= full_url("/episodes.rss") %>" />
   </head>
 
   <body class="<%= page_classes %>">
     <header role="banner">
-      <h1><%= link_to "Some Fine Television", "/" %></h1>
+      <h1><%= link_to site_name, "/" %></h1>
     </header>
 
     <%= yield %>
