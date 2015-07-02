@@ -58,6 +58,8 @@ helpers do
   def episodes
     @episodes ||= sitemap.resources.find_all do |resource|
       resource.path =~ %r{episodes/.*\.html}
+    end.reject do |resource|
+      resource.data.hidden
     end.sort_by do |resource|
       episode_number(resource)
     end.reverse

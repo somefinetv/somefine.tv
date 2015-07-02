@@ -1,5 +1,6 @@
 ---
 date: 2015-06-08
+hidden: true
 title: Shows We're Watching
 shows:
   - Breaking Bad
