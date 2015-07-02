@@ -23,7 +23,7 @@ xml.rss(
 
     episodes.each do |episode|
       xml.item do
-        xml.title episode.data.title
+        xml.title "#{episode_number(episode)}: #{episode.data.title}"
         xml.description episode.render(layout: false)
         xml.pubDate rfc822_timestamp(episode.data.date)
         xml.link full_url(episode.url)
