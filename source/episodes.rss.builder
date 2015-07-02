@@ -19,7 +19,7 @@ xml.rss(
     xml.tag! "itunes:summary", "Discussions of the fine TV availble to us today."
     xml.tag! "itunes:category", text: "TV & Film"
     xml.tag! "itunes:explicit", "clean"
-    xml.tag! "itunes:image", href: full_url(image_path("podcast-cover.png"))
+    xml.tag! "itunes:image", href: image_path("podcast-cover.png")
 
     episodes.each do |episode|
       xml.item do
