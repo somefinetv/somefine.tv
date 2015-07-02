@@ -26,6 +26,7 @@
 
 page "/episodes/*", layout: :episode
 page "/episodes.rss", layout: false
+page "/episodes.html", layout: false
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
 # proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
