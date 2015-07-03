@@ -1,8 +1,12 @@
 <% if episodes.any? %>
+  <h2>Recent episodes</h2>
   <ol class="episodes">
     <% episodes.each do |episode| %>
       <li>
-        <%= link_to "#{episode_number(episode)}: #{episode.data.title}", episode.url %>
+        <h3><%= link_to "#{episode_number(episode)}: #{episode.data.title}", episode.url %></h3>
+        <% if episode.data.excerpt %>
+          <p><%= episode.data.excerpt %></p>
+        <% end %>
       </li>
     <% end %>
   </ol>

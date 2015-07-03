@@ -78,7 +78,7 @@ helpers do
   end
 
   def site_name
-    "Some Fine Television"
+    "Some fine television"
   end
 
   def full_url(path)

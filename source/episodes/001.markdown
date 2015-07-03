@@ -1,5 +1,6 @@
 ---
 date: 2015-06-08
+excerpt: Secret pilot episode.
 hidden: true
 title: Shows We're Watching
 shows:
