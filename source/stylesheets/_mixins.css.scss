@@ -1,0 +1,5 @@
+@mixin non-mobile {
+  @media only screen and (min-width: $break-small + 1) {
+    @content;
+  }
+}

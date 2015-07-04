@@ -8,7 +8,7 @@ body {
 
 header {
   margin: 0px auto;
-  max-width: 960px;
+  max-width: $max-width;
   text-align: center;
 
   img {
@@ -26,9 +26,30 @@ header {
   }
 }
 
+footer {
+  border-top: 1px solid #ddd;
+  margin: 3em 0 0;
+  padding: 3em 0 0;
+  text-align: center;
+
+  @include non-mobile {
+    p {
+      display: inline;
+    }
+
+    br {
+      display: none;
+    }
+
+    p + p:before {
+      content: (" | ");
+    }
+  }
+}
+
 main {
   margin: 0px auto;
-  max-width: 960px;
+  max-width: $max-width;
 }
 
 h2 {
