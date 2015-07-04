@@ -10,5 +10,5 @@ task release: :build do
 end
 
 def deploy(host)
-  sh "rsync -avz --delete build/ #{host}:/var/www/#{host}/public"
+  sh "rsync -avz build/ #{host}:/var/www/#{host}/public"
 end
