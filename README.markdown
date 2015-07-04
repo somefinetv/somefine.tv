@@ -17,5 +17,5 @@ Adding Episodes
 Episode numbers start with 001 and increment upward.
 
 * Add the new episode to `source/episodes/` with the filename `NNN.markdown`.
-    * The `title` and `date` attributes are required in the [YAML front matter](https://middlemanapp.com/basics/frontmatter/). Optionally, fill in the `shows` array for later indexing.
+    * The `date`, `excerpt`, and `title` attributes are required in the [YAML front matter](https://middlemanapp.com/basics/frontmatter/). Optionally, fill in the `shows` array for later indexing.
 * Add the episode's audio to `source/files/NNN.m4a`.
