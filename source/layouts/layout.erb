@@ -16,8 +16,10 @@
       <%= image_tag "logo-300.png", alt: "Logo" %>
       <h1><%= link_to site_name, "/" %></h1>
     </header>
-
-    <%= yield %>
+    
+    <main>
+      <%= yield %>
+    </main>
 
     <footer role="contentinfo">
       <p>Copyright &copy; <%= copyright_date %> Patrick Byrne &amp; Samuel Fine</p>
