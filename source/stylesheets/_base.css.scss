@@ -11,6 +11,12 @@ header {
   margin: 0px auto;
   max-width: 960px;
   text-align: center;
+  
+  img {
+    width: 25%;
+    margin: 30px 0 10px;
+  }
+  
   h1 {
     font-size: 1.5em;
     font-weight: 400;
@@ -19,6 +25,11 @@ header {
       text-decoration: none;
     }
   }
+}
+
+main {
+  margin: 0px auto;
+  max-width: 960px;
 }
 
 h2 {
