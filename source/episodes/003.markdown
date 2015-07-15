@@ -1,0 +1,18 @@
+---
+date: 2015-07-15
+excerpt:
+title: Yeah, Whatever. I Don't Know
+shows:
+  - Mr Robot
+---
+
+What say Pat and Sam of Mr Robot's second episode, [*eps1.1_ones-and-zer0es.mpeg*][s01e02-imdb]? Is it as good as the pilot? Is the episode a one, or is it a zero? Listen to find out!
+
+### Links
+
+* [Mr Robot official site][mr-robot-usa]
+* [Mr Robot on IMDB][mr-robot-imdb]
+
+[s01e02-imdb]:http://www.imdb.com/title/tt4686038/
+[mr-robot-imdb]:http://www.imdb.com/title/tt4158110/
+[mr-robot-usa]:http://www.usanetwork.com/mrrobot
