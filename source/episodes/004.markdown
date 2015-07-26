@@ -1,6 +1,7 @@
 ---
 date: 2015-07-25
 excerpt: Can Mr Robot keep up the streak of good episodes? Or will it be haunted by its own daemons? Listen to find out!
+explicit: true
 title: I'll Hug Just About Anybody — Mr Robot S01E03
 shows:
   - Mr Robot
