@@ -1,20 +1,20 @@
 ---
 date: 2015-07-25
-excerpt: Can Mr Robot keep up the streak of good episodes? Or will it be haunted by its own daemons? Listen to find out!
+excerpt: Can Mr Robot keep up the streak of good episodes? Listen to find out!
 explicit: true
 title: I'll Hug Just About Anybody — Mr Robot S01E03
 shows:
   - Mr Robot
 ---
 
-Mr Robot started strong with its first two episodes, but what do Sam and Pat think of its third episode, [*eps1.3_da3m0ns.mp4*][s01e03-imdb]? Can it keep the streak alive or will it be haunted by its own daemons? Listen to find out!
+Mr Robot started strong with its first two episodes, but what do Sam and Pat think of its third episode, [*eps1.2_d3bug.mkv*][s01e03-imdb]? Can it keep the streak alive? Listen to find out!
 
 ### Links
 
 * [Mr Robot official site][mr-robot-usa]
 * [Mr Robot on IMDB][mr-robot-imdb]
 
-[s01e03-imdb]:http://www.imdb.com/title/tt4659980/
+[s01e03-imdb]:http://www.imdb.com/title/tt4730002/
 [mr-robot-imdb]:http://www.imdb.com/title/tt4158110/
 [mr-robot-usa]:http://www.usanetwork.com/mrrobot
 
