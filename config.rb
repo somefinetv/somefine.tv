@@ -57,7 +57,7 @@ helpers do
 
   def episodes
     @episodes ||= sitemap.resources.find_all do |resource|
-      resource.path =~ %r{episodes/.*\.html}
+      resource.path =~ %r{episodes/\d+$}
     end.reject do |resource|
       resource.data.hidden
     end.sort_by do |resource|
@@ -82,7 +82,10 @@ helpers do
   end
 
   def full_url(path)
-    "#{config[:http_prefix]}#{path}"
+    "#{config[:http_prefix]}#{path}".tap do |url|
+      # url = "#{url}/" unless path.start_with?("/files")
+      puts "#{path} => #{url}"
+    end
   end
 
   def rfc822_timestamp(timeish)
@@ -105,8 +108,6 @@ set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
-
-set :partials_dir, 'partials'
 
 # Build-specific configuration
 configure :build do

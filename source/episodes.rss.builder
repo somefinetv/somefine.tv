@@ -26,8 +26,8 @@ xml.rss(
         xml.title "#{episode_number(episode)}: #{episode.data.title}"
         xml.description episode.render(layout: false)
         xml.pubDate rfc822_timestamp(episode.data.date)
-        xml.link full_url(episode.url)
-        xml.guid full_url(episode.url), isPermaLink: true
+        xml.link episode.url
+        xml.guid episode.url, isPermaLink: true
         Array(episode.data.shows).each do |show|
           xml.category show
         end
