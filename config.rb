@@ -11,7 +11,7 @@
 #   page "/admin/*"
 # end
 
-# page "/episodes/*", layout: :episode
+page "/episodes/*", layout: :episode
 page "/episodes.rss", layout: false
 page "/episodes.html", layout: false
 

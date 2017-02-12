@@ -1,7 +1,6 @@
 ---
 date: 2015-07-01
 excerpt: In this inaugural episode (pay no attention to the episode number behind the curtain), Pat and Sam discuss the first episode of Mr Robot. Critics are raving, but what think our intrepid hosts? Listen to find out!
-layout: episode
 title: Unnatural Pause - Mr Robot S02E01
 shows:
   - Mr Robot

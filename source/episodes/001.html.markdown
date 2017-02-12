@@ -2,7 +2,6 @@
 date: 2015-06-08
 excerpt: Secret pilot episode.
 hidden: true
-layout: episode
 title: Shows We're Watching
 shows:
   - Breaking Bad
