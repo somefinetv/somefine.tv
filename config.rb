@@ -1,16 +1,3 @@
-###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
-
-###
-# Page options, layouts, aliases and proxies
-###
-
 # Per-page layout changes:
 #
 # With no layout
@@ -24,7 +11,7 @@
 #   page "/admin/*"
 # end
 
-page "/episodes/*", layout: :episode
+# page "/episodes/*", layout: :episode
 page "/episodes.rss", layout: false
 page "/episodes.html", layout: false
 
@@ -57,7 +44,7 @@ helpers do
 
   def episodes
     @episodes ||= sitemap.resources.find_all do |resource|
-      resource.path =~ %r{episodes/\d+$}
+      resource.path =~ %r{episodes/\d+.html$}
     end.reject do |resource|
       resource.data.hidden
     end.sort_by do |resource|
@@ -66,7 +53,7 @@ helpers do
   end
 
   def episode_number(episode)
-    File.basename(episode.source_file).sub(".markdown", "")
+    File.basename(episode.source_file).sub(".html.markdown", "")
   end
 
   def path_to_audio(page)
@@ -119,9 +106,6 @@ configure :build do
 
   # Enable cache buster
   activate :asset_hash
-
-  # Use relative URLs
-  activate :relative_assets
 
   # Or use a different image path
   set :http_prefix, "http://somefine.tv"

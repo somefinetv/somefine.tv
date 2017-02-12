@@ -1,6 +1,7 @@
 ---
 date: 2015-07-15
 excerpt: What say Pat and Sam of Mr Robot's second episode? Is it as good as the pilot? Is the episode a one, or is it a zero? Listen to find out!
+layout: episode
 title: Yeah, Whatever. I Don't Know — Mr Robot S01E02
 shows:
   - Mr Robot
