@@ -9,6 +9,6 @@ task release: :build do
   deploy
 end
 
-def deploy(host)
+def deploy
   sh "aws s3 sync build/ s3://somefine-tv --profile personal"
 end
