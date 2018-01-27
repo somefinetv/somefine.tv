@@ -6,9 +6,9 @@ task release: :build do
   # year-month-day-hourminute
   timestamp = Time.now.strftime('%Y-%m-%d-%H%M')
   sh "git tag '#{timestamp}' && git push --tag"
-  deploy "somefine.tv"
+  deploy
 end
 
 def deploy(host)
-  sh "rsync -avz build/ #{host}:/var/www/#{host}/public"
+  sh "aws s3 sync build/ s3://somefine-tv --profile personal"
 end
