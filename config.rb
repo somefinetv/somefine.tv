@@ -69,7 +69,7 @@ helpers do
   end
 
   def full_url(path)
-    "#{config[:http_prefix]}#{path}".tap do |url|
+    "#{site_url}#{path}".tap do |url|
       # url = "#{url}/" unless path.start_with?("/files")
       puts "#{path} => #{url}"
     end
