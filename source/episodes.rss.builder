@@ -10,7 +10,7 @@ xml.rss(
     xml.link site_url
     xml.title site_name
     xml.description "Discussions of the fine TV availble to us today."
-    xml.tag! "atom:link", rel: "self", type: "application/rss+xml", href: current_page.url
+    xml.tag! "atom:link", rel: "self", type: "application/rss+xml", href: full_url(current_page.url)
     xml.pubDate rfc822_timestamp(episodes.map { |e| e.data.date }.max)
     xml.lastBuildDate rfc822_timestamp(Time.now)
     xml.language "en-us"
@@ -19,7 +19,7 @@ xml.rss(
     xml.tag! "itunes:summary", "Discussions of the fine TV availble to us today."
     xml.tag! "itunes:category", text: "TV & Film"
     xml.tag! "itunes:explicit", "clean"
-    xml.tag! "itunes:image", href: image_path("podcast-cover.png")
+    xml.tag! "itunes:image", href: full_url(image_path("podcast-cover.png"))
 
     episodes.each do |episode|
       xml.item do
