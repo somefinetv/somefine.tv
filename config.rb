@@ -61,7 +61,7 @@ helpers do
   end
 
   def site_url
-    config[:http_prefix]
+    "https://somefine.tv"
   end
 
   def site_name
@@ -108,5 +108,5 @@ configure :build do
   activate :asset_hash
 
   # Or use a different image path
-  set :http_prefix, "http://somefine.tv"
+  # set :http_prefix, "http://somefine.tv"
 end
