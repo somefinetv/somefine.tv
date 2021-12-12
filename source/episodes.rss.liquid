@@ -1,0 +1,41 @@
+---
+templateEngineOverride: liquid
+permalink: episodes.rss
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <link>{{ process.env.URL }}</link>
+    <title>{{ settings.siteName }}</title>
+    <description>{{ settings.siteDescription }}</description>
+    <atom:link rel="self" type="application/rss+xml" href="{{ process.env.URL }}/episodes.rss"/>
+    <pubDate>{{ collections.episodes | map: "date" | sort | first | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+    <lastBuildDate>{{ "now" | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <language>en-us</language>
+    <itunes:author>Patrick Byrne and Samuel Fine</itunes:author>
+    <itunes:summary>{{ settings.siteDescription }}</itunes:summary>
+    <itunes:category text="TV &amp; Film"/>
+    <itunes:explicit>clean</itunes:explicit>
+    <itunes:image href="{{ process.env.URL }}/images/podcast-cover.svg"/>
+
+    <episodes>
+      {% for episode in collections.episodes -%}
+        <item>
+          <title>{{ episode.fileSlug }}: {{ episode.data.title }}</title>
+          <description>{{ episode.data.excerpt }}</description>
+          <pubDate>{{ episode.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+          <link>{{ process.env.URL }}{{ episode.url }}</link>
+          <guid isPermaLink="false">http://somefine.tv{{ episode.url }}</guid>
+          {% for show in episode.data.shows -%}
+            <category>{{ show }}</category>
+          {% endfor -%}
+          <enclosure url="{{ process.env.URL }}/files/{{ episode.fileSlug }}.m4a" type="audo/mp4"/>
+          <itunes:summary>{{ episode.data.excerpt }}</itunes:summary>
+          {% if episode.data.explicit -%}
+            <itunes:explicit>yes</itunes:explicit>
+          {% endif -%}
+        </item>
+      {% endfor -%}
+    </episodes>
+  </channel>
+</rss>

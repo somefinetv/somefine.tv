@@ -1,11 +1,11 @@
 .PHONY: build
 build:
-	bundle exec middleman build
+	yarn run build
 
 .PHONY: serve
 serve:
-	bundle exec middleman serve
+	yarn run serve
 
 .PHONY: clean
 clean:
-	rm -Rf build/
+	yarn run clean

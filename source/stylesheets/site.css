@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* $brand-main: #164e63; - cyan-900 */
+
+body {
+  font-size: 20px;
+  @apply font-light;
+  @apply font-sans;
+  @apply text-gray-800;
+}
+
+header, main, footer {
+  @apply max-w-2xl;
+  @apply mx-auto;
+}
+
+header {
+  @apply mx-auto;
+  @apply my-0;
+  @apply text-center;
+
+  & img {
+    @apply mb-2;
+    @apply mt-4;
+    @apply mx-auto;
+
+    @apply w-1/2;
+    @apply lg:w-1/4;
+  }
+
+  & h1 {
+    @apply text-2xl;
+    @apply font-normal;
+    @apply my-2;
+    @apply text-cyan-900;
+
+    & a {
+      @apply no-underline;
+      @apply text-cyan-900;
+
+      &:hover {
+        @apply underline;
+      }
+    }
+  }
+}
+
+main {
+  & a {
+    @apply underline;
+    @apply text-cyan-900;
+  }
+
+  & h2 {
+    @apply text-2xl;
+    @apply my-2;
+  }
+
+  & h3 {
+    @apply my-1.5;
+  }
+
+  & .episodes li {
+    @apply my-2;
+  }
+}
+
+footer {
+  @apply border-t;
+  @apply border-gray-800;
+  @apply mt-12;
+  @apply pt-12;
+  @apply text-center;
+
+  & a {
+    @apply underline;
+    @apply text-cyan-900;
+  }
+}

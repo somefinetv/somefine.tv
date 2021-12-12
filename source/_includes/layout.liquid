@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "initial-scale=1.0, width=device-width">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>{{ title | default: "Some Fine Television" }}</title>
+
+    <link rel="stylesheet" href="/stylesheets/site.css" />
+
+    <link rel="alternate" type="application/rss+xml" title="Podcast RSS Feed" href="/episodes.rss" />
+    <link rel="icon" href="/images/favicon.svg" />
+  </head>
+
+  <body>
+    <header role="banner">
+      <img src="/images/logo.svg" alt="Logo">
+      <h1><a href="/">{{ settings.siteName }}</a></h1>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+
+    <footer role="contentinfo">
+      <p class="contentinfo--copyright">Copyright &copy; 2015–{{ "now" | date: "%Y" }} Patrick Byrne &amp; Samuel Fine</p>
+      <p class="contentinfo--links">
+      <a href="/episodes.rss">Podcast feed</a>
+      |
+      <a href="https://itunes.apple.com/us/podcast/some-fine-television/id1016238018">Subscribe in iTunes</a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+---
+layout: layout
+---
+
+<h2>{{ title }}</h2>
+
+<audio controls="controls">
+  <source src="/files/{{ page.fileSlug }}.m4a" type="audio/mp4">
+</audio>
+
+{{ content | safe }}

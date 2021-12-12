@@ -1,0 +1,15 @@
+{% if collections.episodes %}
+  <h2>Recent episodes</h2>
+  <ol class="episodes">
+    {% for episode in collections.episodes reversed %}
+      <li>
+        <h3><a href="{{ episode.url }}">{{ episode.fileSlug }}: {{ episode.data.title }}</a></h3>
+        {% if episode.data.excerpt %}
+          <p>{{ episode.data.excerpt }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+{% else %}
+  <h3>Sorry, no episodes (yet)</h3>
+{% endif %}

@@ -1,0 +1,7 @@
+---
+permalink: "_redirects"
+---
+/episodes /
+{% for episode in collections.episodes -%}
+/files/{{ episode.fileSlug }}.m4a https://somefine-tv.s3.amazonaws.com/episodes/{{ episode.fileSlug }}.m4a
+{% endfor -%}
