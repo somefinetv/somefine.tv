@@ -7,6 +7,9 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= page_title %></title>
 
+    <!-- DEPLOY_PRIME_URL: <%= ENV["DEPLOY_PRIME_URL"] %> -->
+    <!-- URL: <%= ENV["URL"] %> -->
+
     <%= stylesheet_link_tag "all" %>
 
     <link rel="alternate" type="application/rss+xml" title="Podcast RSS Feed" href="<%= full_url("/episodes.rss") %>" />
